@@ -353,21 +353,21 @@ const MiscCalculatorCard = ({ title, type }) => {
     switch (type) {
       case 'tip':
         return (
-          <div className="mt-4 space-y-2">
+          <div className="mt-4 space-y-2 animate-fadeIn">
             <p className="text-gray-700 dark:text-gray-300">Tip Amount: ${result.tip}</p>
             <p className="text-gray-700 dark:text-gray-300">Total Amount: ${result.total}</p>
           </div>
         );
       case 'discount':
         return (
-          <div className="mt-4 space-y-2">
+          <div className="mt-4 space-y-2 animate-fadeIn">
             <p className="text-gray-700 dark:text-gray-300">Discount Amount: ₹{result.discount}</p>
             <p className="text-gray-700 dark:text-gray-300">Final Price: ₹{result.final}</p>
           </div>
         );
       case 'grade':
         return (
-          <div className="space-y-4">
+          <div className="space-y-4 animate-slideUp">
             {[0, 1, 2].map((index) => (
               <div key={index} className="grid grid-cols-2 gap-4">
                 <div>
@@ -405,7 +405,7 @@ const MiscCalculatorCard = ({ title, type }) => {
               </div>
             ))}
             {result && (
-              <div className="mt-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+              <div className="mt-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
                 <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
                   Final Grade: <span className="text-blue-600 dark:text-blue-400">{result.grade}%</span>
                 </p>
@@ -415,14 +415,14 @@ const MiscCalculatorCard = ({ title, type }) => {
         );
       case 'probability':
         return (
-          <div className="mt-4 space-y-2">
+          <div className="mt-4 space-y-2 animate-fadeIn">
             <p className="text-gray-700 dark:text-gray-300">Union (A ∪ B): {result.union}</p>
             <p className="text-gray-700 dark:text-gray-300">Intersection (A ∩ B): {result.intersection}</p>
           </div>
         );
       case 'password':
         return (
-          <div className="mt-4 space-y-2">
+          <div className="mt-4 space-y-2 animate-fadeIn">
             <div className="flex items-center space-x-2">
               <p className="text-gray-700 dark:text-gray-300">Generated Password: {result.password}</p>
               <button
@@ -436,7 +436,7 @@ const MiscCalculatorCard = ({ title, type }) => {
         );
       case 'color':
         return (
-          <div className="mt-4 space-y-2">
+          <div className="mt-4 space-y-2 animate-fadeIn">
             {result.rgb && <p className="text-gray-700 dark:text-gray-300">RGB: {result.rgb}</p>}
             {result.hex && <p className="text-gray-700 dark:text-gray-300">HEX: {result.hex}</p>}
           </div>
@@ -447,10 +447,10 @@ const MiscCalculatorCard = ({ title, type }) => {
   };
 
   return (
-    <div className="p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 space-y-6 border border-gray-100 dark:border-gray-700">
+    <div className="p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 space-y-6 border border-gray-100 dark:border-gray-700 transform hover:-translate-y-1 hover:scale-[1.02] backdrop-filter backdrop-blur-lg">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-400 dark:to-blue-600">{title}</h2>
-        <div className="h-8 w-8 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-400 dark:to-blue-500 opacity-75"></div>
+        <div className="h-8 w-8 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-400 dark:to-blue-500 opacity-75 animate-pulse"></div>
       </div>
       <div className="space-y-6">
         <div className="space-y-4 transition-all duration-300">
@@ -458,8 +458,9 @@ const MiscCalculatorCard = ({ title, type }) => {
         </div>
         <button
           onClick={handleCalculate}
-          className="w-full px-6 py-3 text-white text-lg font-semibold bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl hover:from-blue-700 hover:to-blue-800 transform hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-lg hover:shadow-xl"
+          className="group relative w-full px-6 py-3 text-white text-lg font-semibold bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl hover:from-blue-700 hover:to-blue-800 transform hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-lg hover:shadow-xl overflow-hidden"
         >
+          <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></span>
           {type === 'password' ? 'Generate' : 'Calculate'}
         </button>
         <div className="transition-all duration-300 ease-in-out">
