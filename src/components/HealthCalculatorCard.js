@@ -337,43 +337,9 @@ const HealthCalculatorCard = ({ title, type }) => {
             <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
               BMI: <span className="text-blue-600 dark:text-blue-400">{result.bmi}</span>
             </p>
-            <div className={`mt-4 p-6 rounded-xl transform transition-all duration-500 ${
-              result.category === 'Underweight' ? 'bg-yellow-50 dark:bg-yellow-900/30 border-2 border-yellow-200 dark:border-yellow-700 animate-pulse' :
-              result.category === 'Normal weight' ? 'bg-green-50 dark:bg-green-900/30 border-2 border-green-200 dark:border-green-700 animate-bounce' :
-              result.category === 'Overweight' ? 'bg-orange-50 dark:bg-orange-900/30 border-2 border-orange-200 dark:border-orange-700 animate-pulse' :
-              'bg-red-50 dark:bg-red-900/30 border-2 border-red-200 dark:border-red-700 animate-pulse'
-            }`}>
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className={`text-xl font-bold mb-2 ${result.category === 'Underweight' ? 'text-yellow-600 dark:text-yellow-400' :
-                    result.category === 'Normal weight' ? 'text-green-600 dark:text-green-400' :
-                    result.category === 'Overweight' ? 'text-orange-600 dark:text-orange-400' :
-                    'text-red-600 dark:text-red-400'}`}>
-                    {result.category}
-                  </p>
-                  <p className={`text-sm ${result.category === 'Underweight' ? 'text-yellow-600 dark:text-yellow-400' :
-                    result.category === 'Normal weight' ? 'text-green-600 dark:text-green-400' :
-                    result.category === 'Overweight' ? 'text-orange-600 dark:text-orange-400' :
-                    'text-red-600 dark:text-red-400'}`}>
-                    {result.category === 'Underweight' ? 'Consider consulting a nutritionist for a healthy weight gain plan' :
-                     result.category === 'Normal weight' ? 'Great job! Maintain your healthy lifestyle' :
-                     result.category === 'Overweight' ? 'Focus on balanced diet and regular exercise' :
-                     'Please consult a healthcare provider for personalized advice'}
-                  </p>
-                </div>
-                <div className={`w-16 h-16 rounded-full flex items-center justify-center ${result.category === 'Underweight' ? 'bg-yellow-100 dark:bg-yellow-800' :
-                  result.category === 'Normal weight' ? 'bg-green-100 dark:bg-green-800' :
-                  result.category === 'Overweight' ? 'bg-orange-100 dark:bg-orange-800' :
-                  'bg-red-100 dark:bg-red-800'}`}>
-                  <span className="text-2xl">
-                    {result.category === 'Underweight' ? '⚠️' :
-                     result.category === 'Normal weight' ? '✨' :
-                     result.category === 'Overweight' ? '⚖️' :
-                     '❗'}
-                  </span>
-                </div>
-              </div>
-            </div>
+            <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
+              Category: <span className="text-blue-600 dark:text-blue-400">{result.category}</span>
+            </p>
           </div>
         );
 
@@ -441,10 +407,10 @@ const HealthCalculatorCard = ({ title, type }) => {
   };
 
   return (
-    <div className="p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 space-y-6 border border-gray-100 dark:border-gray-700">
+    <div className="p-6 bg-gradient-to-br from-white via-gray-100 to-indigo-50 dark:from-gray-800 dark:via-gray-900 dark:to-indigo-900 rounded-2xl shadow-xl space-y-6 border border-gray-200/50 dark:border-gray-700/50 backdrop-filter backdrop-blur-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-400 dark:to-blue-600">{title}</h2>
-        <div className="h-8 w-8 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-400 dark:to-blue-500 opacity-75"></div>
+        <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-blue-600 dark:from-indigo-400 dark:to-blue-400 tracking-tight group-hover:scale-[1.02] transition-transform duration-300">{title}</h2>
+        <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-600 dark:from-indigo-400 dark:to-blue-500 opacity-80 group-hover:opacity-100 transition-all duration-300 transform group-hover:rotate-12 group-hover:scale-110"></div>
       </div>
       <div className="space-y-6">
         <div className="space-y-4 transition-all duration-300">
@@ -452,9 +418,10 @@ const HealthCalculatorCard = ({ title, type }) => {
         </div>
         <button
           onClick={handleCalculate}
-          className="w-full px-6 py-3 text-white text-lg font-semibold bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl hover:from-blue-700 hover:to-blue-800 transform hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-lg hover:shadow-xl"
+          className="w-full px-6 py-3.5 text-white text-lg font-semibold bg-gradient-to-r from-indigo-600 to-blue-600 rounded-xl hover:from-indigo-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transform transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl relative overflow-hidden group/btn"
         >
-          Calculate
+          <span className="relative z-10">Calculate</span>
+          <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 ease-out"></div>
         </button>
         <div className="transition-all duration-300 ease-in-out">
           {renderResult()}

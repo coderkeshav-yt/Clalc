@@ -5,13 +5,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 backdrop-blur-md border-b border-white/10 sticky top-0 z-50 shadow-lg">
+    <nav className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 backdrop-blur-md border-b border-slate-700/50 sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3 group py-2">
               <span className="text-2xl transform transition-transform group-hover:scale-110 group-hover:rotate-12 filter drop-shadow-lg">🧮</span>
-              <span className="text-white font-extrabold text-xl tracking-tight group-hover:text-blue-200 transition-all duration-300 filter drop-shadow">
+              <span className="text-white font-extrabold text-xl tracking-tight group-hover:text-slate-200 transition-all duration-300 filter drop-shadow">
                 Calculator Hub
               </span>
             </Link>
@@ -19,29 +19,29 @@ const Navbar = () => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-2">
-            <Link href="/basic" className="text-white/90 hover:text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-white/10 relative overflow-hidden group">
+            <Link href="/basic" className="text-slate-200 hover:text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-slate-600/30 relative overflow-hidden group">
               <span className="relative z-10">Basic</span>
-              <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-slate-500/20 to-slate-400/20 transition-all duration-300 group-hover:w-full"></div>
             </Link>
-            <Link href="/financial" className="text-white/90 hover:text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-white/10 relative overflow-hidden group">
+            <Link href="/financial" className="text-slate-200 hover:text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-slate-600/30 relative overflow-hidden group">
               <span className="relative z-10">Financial</span>
-              <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-slate-500/20 to-slate-400/20 transition-all duration-300 group-hover:w-full"></div>
             </Link>
-            <Link href="/health" className="text-white/90 hover:text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-white/10 relative overflow-hidden group">
+            <Link href="/health" className="text-slate-200 hover:text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-slate-600/30 relative overflow-hidden group">
               <span className="relative z-10">Health</span>
-              <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-slate-500/20 to-slate-400/20 transition-all duration-300 group-hover:w-full"></div>
             </Link>
-            <Link href="/unit-converters" className="text-white/90 hover:text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-white/10 relative overflow-hidden group">
+            <Link href="/unit-converters" className="text-slate-200 hover:text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-slate-600/30 relative overflow-hidden group">
               <span className="relative z-10">Unit Converters</span>
-              <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-slate-500/20 to-slate-400/20 transition-all duration-300 group-hover:w-full"></div>
             </Link>
-            <Link href="/math-engineering" className="text-white/90 hover:text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-white/10 relative overflow-hidden group">
+            <Link href="/math-engineering" className="text-slate-200 hover:text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-slate-600/30 relative overflow-hidden group">
               <span className="relative z-10">Math & Engineering</span>
-              <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-slate-500/20 to-slate-400/20 transition-all duration-300 group-hover:w-full"></div>
             </Link>
-            <Link href="/miscellaneous" className="text-white/90 hover:text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-white/10 relative overflow-hidden group">
+            <Link href="/miscellaneous" className="text-slate-200 hover:text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-slate-600/30 relative overflow-hidden group">
               <span className="relative z-10">Miscellaneous</span>
-              <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-slate-500/20 to-slate-400/20 transition-all duration-300 group-hover:w-full"></div>
             </Link>
           </div>
 
