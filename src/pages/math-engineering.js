@@ -14,7 +14,7 @@ const MathEngineering = () => {
             Math & Engineering Calculators
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8 animate-fade-in-delay leading-relaxed">
-            We're currently developing advanced mathematical and engineering calculators to provide you with precise and reliable calculations.
+            We&apos;re currently developing advanced mathematical and engineering calculators to provide you with precise and reliable calculations.
           </p>
         </div>
 

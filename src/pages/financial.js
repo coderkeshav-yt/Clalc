@@ -6,7 +6,7 @@ const FinancialCalculator = () => {
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 tracking-tight">Financial Calculators</h1>
         <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-          Make informed financial decisions with our suite of calculators. Whether you're planning a loan, calculating investments, or managing your finances.
+          Make informed financial decisions with our suite of calculators. Whether you&apos;re planning a loan, calculating investments, or managing your finances.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FinancialCalculatorCard title="Loan Calculator" type="loan" />
