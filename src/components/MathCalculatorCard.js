@@ -452,7 +452,6 @@ const MathCalculatorCard = ({ title, type }) => {
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
                 Voltage: <span className="text-blue-600 dark:text-blue-400">{result.voltage} V</span>
               </p>
-              </p>
             )}
             {result.current && (
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
@@ -618,7 +617,6 @@ const MathCalculatorCard = ({ title, type }) => {
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
                 Voltage: <span className="text-blue-600 dark:text-blue-400">{result.voltage} V</span>
               </p>
-              </p>
             )}
             {result.current && (
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
@@ -639,7 +637,6 @@ const MathCalculatorCard = ({ title, type }) => {
             {result.voltage && (
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
                 Voltage: <span className="text-blue-600 dark:text-blue-400">{result.voltage} V</span>
-              </p>
               </p>
             )}
             {result.current && (
@@ -794,7 +791,6 @@ const MathCalculatorCard = ({ title, type }) => {
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
                 Voltage: <span className="text-blue-600 dark:text-blue-400">{result.voltage} V</span>
               </p>
-              </p>
             )}
             {result.current && (
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
@@ -815,7 +811,6 @@ const MathCalculatorCard = ({ title, type }) => {
             {result.voltage && (
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
                 Voltage: <span className="text-blue-600 dark:text-blue-400">{result.voltage} V</span>
-              </p>
               </p>
             )}
             {result.current && (
@@ -970,7 +965,6 @@ const MathCalculatorCard = ({ title, type }) => {
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
                 Voltage: <span className="text-blue-600 dark:text-blue-400">{result.voltage} V</span>
               </p>
-              </p>
             )}
             {result.current && (
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
@@ -991,7 +985,6 @@ const MathCalculatorCard = ({ title, type }) => {
             {result.voltage && (
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
                 Voltage: <span className="text-blue-600 dark:text-blue-400">{result.voltage} V</span>
-              </p>
               </p>
             )}
             {result.current && (
@@ -1146,7 +1139,6 @@ const MathCalculatorCard = ({ title, type }) => {
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
                 Voltage: <span className="text-blue-600 dark:text-blue-400">{result.voltage} V</span>
               </p>
-              </p>
             )}
             {result.current && (
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
@@ -1167,7 +1159,6 @@ const MathCalculatorCard = ({ title, type }) => {
             {result.voltage && (
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
                 Voltage: <span className="text-blue-600 dark:text-blue-400">{result.voltage} V</span>
-              </p>
               </p>
             )}
             {result.current && (
@@ -1322,7 +1313,6 @@ const MathCalculatorCard = ({ title, type }) => {
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
                 Voltage: <span className="text-blue-600 dark:text-blue-400">{result.voltage} V</span>
               </p>
-              </p>
             )}
             {result.current && (
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
@@ -1343,7 +1333,6 @@ const MathCalculatorCard = ({ title, type }) => {
             {result.voltage && (
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
                 Voltage: <span className="text-blue-600 dark:text-blue-400">{result.voltage} V</span>
-              </p>
               </p>
             )}
             {result.current && (
@@ -1497,4 +1486,3 @@ const MathCalculatorCard = ({ title, type }) => {
             {result.voltage && (
               <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
                 Voltage: <span className="text-blue-600 dark:text-blue-400">{result.voltage} V</span>
-              </p>
