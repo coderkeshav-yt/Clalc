@@ -440,25 +440,17 @@ const MiscCalculatorCard = ({ title, type }) => {
   };
 
   return (
-    <div className="p-6 bg-gradient-to-br from-white via-gray-100 to-indigo-50 dark:from-gray-800 dark:via-gray-900 dark:to-indigo-900 rounded-2xl shadow-xl space-y-6 border border-gray-200/50 dark:border-gray-700/50 backdrop-filter backdrop-blur-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
-      <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-blue-600 dark:from-indigo-400 dark:to-blue-400 tracking-tight group-hover:scale-[1.02] transition-transform duration-300">{title}</h2>
-        <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-600 dark:from-indigo-400 dark:to-blue-500 opacity-80 group-hover:opacity-100 transition-all duration-300 transform group-hover:rotate-12 group-hover:scale-110"></div>
-      </div>
-      <div className="space-y-6">
-        <div className="space-y-4 transition-all duration-300">
-          {renderInputs()}
-        </div>
+    <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg space-y-4">
+      <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h2>
+      <div className="space-y-4">
+        {renderInputs()}
         <button
           onClick={handleCalculate}
-          className="w-full px-6 py-3.5 text-white text-lg font-semibold bg-gradient-to-r from-indigo-600 to-blue-600 rounded-xl hover:from-indigo-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transform transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl relative overflow-hidden group/btn"
+          className="w-full px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         >
-          <span className="relative z-10">{type === 'password' ? 'Generate' : 'Calculate'}</span>
-          <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 ease-out"></div>
+          {type === 'password' ? 'Generate' : 'Calculate'}
         </button>
-        <div className="transition-all duration-300 ease-in-out">
-          {renderResult()}
-        </div>
+        {renderResult()}
       </div>
     </div>
   );
